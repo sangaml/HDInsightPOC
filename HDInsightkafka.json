@@ -69,7 +69,7 @@
       "tags": {},
       "properties": {
         "clusterVersion": "3.6",
-        "osType": "Linux",
+        "osType": "Windows",
         "clusterDefinition": {
           "kind": "kafka",
           "configurations": {
@@ -99,7 +99,7 @@
                 "vmSize": "Standard_D3_v2"
               },
               "osProfile": {
-                "linuxOperatingSystemProfile": {
+                "windowsOperatingSystemProfile": {
                   "username": "[parameters('sshUserName')]",
                   "password": "[parameters('sshPassword')]"
                 }
@@ -117,7 +117,7 @@
                 }
               ],
               "osProfile": {
-                "linuxOperatingSystemProfile": {
+                "windowsOperatingSystemProfile": {
                   "username": "[parameters('sshUserName')]",
                   "password": "[parameters('sshPassword')]"
                 }
@@ -130,7 +130,7 @@
                 "vmSize": "Standard_A3"
               },
               "osProfile": {
-                "linuxOperatingSystemProfile": {
+                "windowsOperatingSystemProfile": {
                   "username": "[parameters('sshUserName')]",
                   "password": "[parameters('sshPassword')]"
                 }
