@@ -51,7 +51,7 @@
     "nicName2": "myVMNic2",
     "addressPrefix": "10.0.0.0/16",
     "subnetName": "Subnet",
-    "subnetPrefix1": "10.0.0.0/24",
+    "subnetPrefix": "10.0.0.0/24",
     "storageAccountType": "Standard_LRS",
     "publicIPAddressName1": "myPublicIP1",
     "publicIPAddressName2": "myPublicIP2",
@@ -198,9 +198,9 @@
         },
         "subnets": [
           {
-            "name": "[variables('subnetName1')]",
+            "name": "[variables('subnetName')]",
             "properties": {
-              "addressPrefix": "[variables('subnetPrefix1')]",
+              "addressPrefix": "[variables('subnetPrefix')]",
               "networkSecurityGroup": {
                 "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroupName'))]"
               }  
