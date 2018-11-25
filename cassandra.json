@@ -306,14 +306,27 @@
               "id": "[resourceId('Microsoft.Network/networkInterfaces',variables('nicName1'))]"
             }
           ]
-        },
-        "diagnosticsProfile": {
-          "bootDiagnostics": {
-            "enabled": true,
-            "storageUri": "[concat(reference(concat('Microsoft.Storage/storageAccounts/', variables('storageAccountName1')), '2016-01-01').primaryEndpoints.blob)]"
-          }
         }
       }
+    },
+    {
+        "type": "Microsoft.Compute/virtualMachines/extensions",
+        "name": "[concat(variables('vmName1'),'/','extensions')]",
+        "apiVersion": "2017-03-30",
+        "location": "[parameters('location')]",
+        "dependsOn": [
+          "[concat('Microsoft.Compute/virtualMachines/', variables('vmName1'))]"
+        ],
+        "properties": {
+          "publisher": "Microsoft.Azure.Extensions",
+          "type": "CustomScript",
+          "typeHandlerVersion": "2.0",
+          "autoUpgradeMinorVersion": true,
+          "settings": {
+            "fileUris": "https://raw.githubusercontent.com/sangaml/HDInsightPOC/master/cassandra.sh",
+            "commandToExecute": "./cassandra.sh"
+          }
+       }
     },
     {
         "apiVersion": "2017-03-30",
@@ -361,14 +374,27 @@
                 "id": "[resourceId('Microsoft.Network/networkInterfaces',variables('nicName2'))]"
               }
             ]
-          },
-          "diagnosticsProfile": {
-            "bootDiagnostics": {
-              "enabled": true,
-              "storageUri": "[concat(reference(concat('Microsoft.Storage/storageAccounts/', variables('storageAccountName2')), '2016-01-01').primaryEndpoints.blob)]"
-            }
           }
         }
-      }
+      },
+      {
+        "type": "Microsoft.Compute/virtualMachines/extensions",
+        "name": "[concat(variables('vmName2'),'/','extensions')]",
+        "apiVersion": "2017-03-30",
+        "location": "[parameters('location')]",
+        "dependsOn": [
+          "[concat('Microsoft.Compute/virtualMachines/', variables('vmName2'))]"
+        ],
+        "properties": {
+          "publisher": "Microsoft.Azure.Extensions",
+          "type": "CustomScript",
+          "typeHandlerVersion": "2.0",
+          "autoUpgradeMinorVersion": true,
+          "settings": {
+            "fileUris": "https://raw.githubusercontent.com/sangaml/HDInsightPOC/master/cassandra.sh",
+            "commandToExecute": "./cassandra.sh"
+          }
+       }
+    }
   ]
 }
