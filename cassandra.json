@@ -3,7 +3,6 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "username": {
-      "defaultValue": "sshuser",
       "type": "string",
       "metadata": {
         "description": "User name for the Virtual Machine."
