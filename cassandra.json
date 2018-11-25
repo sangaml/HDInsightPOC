@@ -311,7 +311,7 @@
     },
     {
         "type": "Microsoft.Compute/virtualMachines/extensions",
-        "name": "[concat(variables('vmName1'),'/','extensions')]",
+        "name": "[concat(variables('vmName1'),'/extensions')]",
         "apiVersion": "2017-03-30",
         "location": "[parameters('location')]",
         "dependsOn": [
@@ -379,7 +379,7 @@
       },
       {
         "type": "Microsoft.Compute/virtualMachines/extensions",
-        "name": "[concat(variables('vmName2'),'/','extensions')]",
+        "name": "[concat(variables('vmName2'),'/extensions')]",
         "apiVersion": "2017-03-30",
         "location": "[parameters('location')]",
         "dependsOn": [
