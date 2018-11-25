@@ -312,7 +312,7 @@
     {
         "type": "Microsoft.Compute/virtualMachines/extensions",
         "name": "[concat(variables('vmName1'),'/extensions')]",
-        "apiVersion": "2017-03-30",
+        "apiVersion": "2018-06-01",
         "location": "[parameters('location')]",
         "dependsOn": [
           "[concat('Microsoft.Compute/virtualMachines/', variables('vmName1'))]"
@@ -323,9 +323,12 @@
           "typeHandlerVersion": "2.0",
           "autoUpgradeMinorVersion": true,
           "settings": {
-            "fileUris": "https://raw.githubusercontent.com/sangaml/HDInsightPOC/master/cassandra.sh",
-            "commandToExecute": "./cassandra.sh"
-          }
+            "fileUris": ["https://raw.githubusercontent.com/sangaml/HDInsightPOC/master/cassandra.sh"
+            ] 
+        },
+        "protectedSettings": {
+          "commandToExecute": "sh cassandra.sh" 
+        }
        }
     },
     {
@@ -380,7 +383,7 @@
       {
         "type": "Microsoft.Compute/virtualMachines/extensions",
         "name": "[concat(variables('vmName2'),'/extensions')]",
-        "apiVersion": "2017-03-30",
+        "apiVersion": "2018-06-01",
         "location": "[parameters('location')]",
         "dependsOn": [
           "[concat('Microsoft.Compute/virtualMachines/', variables('vmName2'))]"
@@ -391,8 +394,11 @@
           "typeHandlerVersion": "2.0",
           "autoUpgradeMinorVersion": true,
           "settings": {
-            "fileUris": "https://raw.githubusercontent.com/sangaml/HDInsightPOC/master/cassandra.sh",
-            "commandToExecute": "./cassandra.sh"
+            "fileUris": ["https://raw.githubusercontent.com/sangaml/HDInsightPOC/master/cassandra.sh"
+            ]
+          },
+          "protectedSettings": {
+            "commandToExecute": "sh cassandra.sh"  
           }
        }
     }
