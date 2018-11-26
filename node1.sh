@@ -17,6 +17,6 @@ ip=ifconfig | sed -n '2 p' | awk '{print $2}'
 
 sed -i '/listen_address:/c\listen_address: '10.0.0.5'' /etc/cassandra/conf/cassandra.yaml
 
-sed -i '/- seeds/c\   -seeds = "10.0.0.5,10.0.0.6"' /etc/cassandra/conf/cassandra.yaml
+sed -i '/- seeds:/c\      - seeds: "10.0.0.5,10.0.0.6"' /etc/cassandra/conf/cassandra.yaml
 
 systemctl restart cassandra
