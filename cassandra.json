@@ -51,6 +51,8 @@
     "addressPrefix": "10.0.0.0/16",
     "subnetName": "Subnet",
     "subnetPrefix": "10.0.0.0/24",
+    "privateIPAddress1": "10.0.0.5",
+    "privateIPAddress2": "10.0.0.6",
     "storageAccountType": "Standard_LRS",
     "publicIPAddressName1": "myPublicIP1",
     "publicIPAddressName2": "myPublicIP2",
@@ -225,7 +227,8 @@
           {
             "name": "ipconfig1",
             "properties": {
-              "privateIPAllocationMethod": "Dynamic",
+              "privateIPAllocationMethod": "Static",
+                "privateIPAddress": "[variables('privateIPAddress1')]",
               "publicIPAddress": {
                 "id": "[resourceId('Microsoft.Network/publicIPAddresses',variables('publicIPAddressName1'))]"
               },
@@ -251,7 +254,8 @@
             {
               "name": "ipconfig1",
               "properties": {
-                "privateIPAllocationMethod": "Dynamic",
+                "privateIPAllocationMethod": "Static",
+                "privateIPAddress": "[variables('privateIPAddress2')]",
                 "publicIPAddress": {
                   "id": "[resourceId('Microsoft.Network/publicIPAddresses',variables('publicIPAddressName2'))]"
                 },
