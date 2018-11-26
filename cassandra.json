@@ -28,7 +28,7 @@
       },
     "ubuntuOSVersion": {
       "type": "string",
-      "defaultValue": "16.04.0-LTS",
+      "defaultValue": "7.2",
       "metadata": {
         "description": "The Ubuntu version for the VM. This will pick a fully patched image of this given Ubuntu version."
       }
@@ -44,8 +44,8 @@
   "variables": {
     "storageAccountName1": "[concat(uniquestring(resourceGroup().id), 'salinuxvm1')]",
     "storageAccountName2": "[concat(uniquestring(resourceGroup().id), 'salinuxvm2')]",
-    "imagePublisher": "Canonical",
-    "imageOffer": "UbuntuServer",
+    "imagePublisher": "RedHat",
+    "imageOffer": "RHEL",
     "nicName1": "myVMNic1",
     "nicName2": "myVMNic2",
     "addressPrefix": "10.0.0.0/16",
