@@ -326,11 +326,11 @@
           "typeHandlerVersion": "2.0",
           "autoUpgradeMinorVersion": true,
           "settings": {
-            "fileUris": ["https://raw.githubusercontent.com/sangaml/HDInsightPOC/master/cassandra.sh"
+            "fileUris": ["https://raw.githubusercontent.com/sangaml/HDInsightPOC/master/node1.sh"
             ]
           },
           "protectedSettings": {
-            "commandToExecute": "./cassandra.sh"  
+            "commandToExecute": "./node1.sh"  
           }
        }
     },
@@ -397,11 +397,11 @@
           "typeHandlerVersion": "2.0",
           "autoUpgradeMinorVersion": true,
           "settings": {
-            "fileUris": ["https://raw.githubusercontent.com/sangaml/HDInsightPOC/master/cassandra.sh"
+            "fileUris": ["https://raw.githubusercontent.com/sangaml/HDInsightPOC/master/node2.sh"
             ]
           },
           "protectedSettings": {
-            "commandToExecute": "./cassandra.sh"  
+            "commandToExecute": "./node2.sh"  
           }
        }
     }
