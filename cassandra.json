@@ -26,9 +26,9 @@
           "description": "Unique DNS Name for the Public IP used to access the Virtual Machine."
         }
       },
-    "ubuntuOSVersion": {
+    "rhelOSVersion": {
       "type": "string",
-      "defaultValue": "7.2",
+      "defaultValue": "7.4",
       "metadata": {
         "description": "The Ubuntu version for the VM. This will pick a fully patched image of this given Ubuntu version."
       }
@@ -293,7 +293,7 @@
           "imageReference": {
             "publisher": "[variables('imagePublisher')]",
             "offer": "[variables('imageOffer')]",
-            "sku": "[parameters('ubuntuOSVersion')]",
+            "sku": "[parameters('rhelOSVersion')]",
             "version": "latest"
           },
           "osDisk": {
@@ -364,7 +364,7 @@
             "imageReference": {
               "publisher": "[variables('imagePublisher')]",
               "offer": "[variables('imageOffer')]",
-              "sku": "[parameters('ubuntuOSVersion')]",
+              "sku": "[parameters('rhelOSVersion')]",
               "version": "latest"
             },
             "osDisk": {
