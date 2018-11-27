@@ -1,4 +1,5 @@
 #!/bin/bash
+#For Ubuntu 16.04 LTS
 clear
 echo "Installing cassandra ..."
 LOGFILE=script.log
