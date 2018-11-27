@@ -330,11 +330,11 @@
           "typeHandlerVersion": "2.0",
           "autoUpgradeMinorVersion": true,
           "settings": {
-            "fileUris": ["https://raw.githubusercontent.com/sangaml/HDInsightPOC/master/node1.sh"
+            "fileUris": ["https://raw.githubusercontent.com/sangaml/HDInsightPOC/master/cassandranode1.sh"
             ]
           },
           "protectedSettings": {
-            "commandToExecute": "./node1.sh"  
+            "commandToExecute": "./cassandranode1.sh"  
           }
        }
     },
@@ -401,11 +401,11 @@
           "typeHandlerVersion": "2.0",
           "autoUpgradeMinorVersion": true,
           "settings": {
-            "fileUris": ["https://raw.githubusercontent.com/sangaml/HDInsightPOC/master/node2.sh"
+            "fileUris": ["https://raw.githubusercontent.com/sangaml/HDInsightPOC/master/cassandranode2.sh"
             ]
           },
           "protectedSettings": {
-            "commandToExecute": "./node2.sh"  
+            "commandToExecute": "./cassandranode2.sh"  
           }
        }
     }
